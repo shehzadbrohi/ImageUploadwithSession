@@ -1,0 +1,21 @@
+﻿@model WebApplication7.FileUp
+
+
+@{
+    ViewBag.Title = "dashboard";
+}
+
+<h2>dashboard</h2>
+
+
+<p><b>Welcome @Session["Name"]</b>    
+    
+    <br />
+    <img src="@Url.Content("~/Content/Images/"+Session["img"])"  height="100" width="199"/></p>
+
+
+@using (Html.BeginForm("logout", "Home"))
+{
+    <input type="submit" value="logout" class="btn btn-default" />
+}
+

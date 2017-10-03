@@ -1,0 +1,46 @@
+﻿
+@model WebApplication7.FileUp
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <br />
+
+    <table>
+
+        <tr>
+            <td>  Student Name  </td>
+            <td>  @Html.TextBoxFor(na => na.name)  </td>
+        </tr>
+
+        <tr>
+            <td>  Student Roll  </td>
+            <td>  @Html.TextBoxFor(ro => ro.roll)  </td>
+        </tr>
+
+        <tr>
+            <td>  Student City  </td>
+            <td>  @Html.TextBoxFor(ci => ci.city)  </td>
+        </tr>
+
+        <tr>
+            <td>  Select Picture  </td>
+            <td>  <input type="file" name="img1" />  </td>
+        </tr>
+
+        <tr>
+            <td>    </td>
+            <td>  <input type="submit" value="Save Data" /> @Html.ActionLink("List", "list", "Home") </td>
+        </tr>
+
+        <tr>
+            <td>   </td>
+            <td> @ViewBag.data  </td>
+        </tr>
+
+    </table>
+}
+
